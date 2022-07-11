@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssx.mapper.SeatMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssx.domain.Seat">
+            <id property="trainNo" column="train_no" jdbcType="INTEGER"/>
+            <id property="carriageNo" column="carriage_no" jdbcType="INTEGER"/>
+            <result property="seatNo" column="seat_no" jdbcType="INTEGER"/>
+            <result property="seatType" column="seat_type" jdbcType="OTHER"/>
+            <result property="extraMoney" column="extra_money" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        train_no,carriage_no,seat_no,
+        seat_type,extra_money
+    </sql>
+</mapper>

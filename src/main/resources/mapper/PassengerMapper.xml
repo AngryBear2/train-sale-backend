@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssx.mapper.PassengerMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssx.domain.Passenger">
+            <id property="passengerPhoneNumber" column="passenger_phone_number" jdbcType="VARCHAR"/>
+            <result property="passengerRealName" column="passenger_real_name" jdbcType="VARCHAR"/>
+            <result property="passengerType" column="passenger_type" jdbcType="OTHER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        passenger_phone_number,passenger_real_name,passenger_type
+    </sql>
+</mapper>

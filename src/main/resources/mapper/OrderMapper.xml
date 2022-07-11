@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssx.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssx.domain.Order">
+            <id property="orderId" column="order_id" jdbcType="INTEGER"/>
+            <result property="userPhoneNumber" column="user_phone_number" jdbcType="VARCHAR"/>
+            <result property="passengerPhoneNumber" column="passenger_phone_number" jdbcType="VARCHAR"/>
+            <result property="trainNumber" column="train_number" jdbcType="VARCHAR"/>
+            <result property="startStation" column="start_station" jdbcType="VARCHAR"/>
+            <result property="endStation" column="end_station" jdbcType="VARCHAR"/>
+            <result property="carriageNo" column="carriage_no" jdbcType="VARCHAR"/>
+            <result property="seatNo" column="seat_no" jdbcType="VARCHAR"/>
+            <result property="orderMoney" column="order_money" jdbcType="VARCHAR"/>
+            <result property="orderCreateTime" column="order_create_time" jdbcType="TIMESTAMP"/>
+            <result property="orderStatus" column="order_status" jdbcType="OTHER"/>
+            <result property="trainStartDate" column="train_start_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,user_phone_number,passenger_phone_number,
+        train_number,start_station,end_station,
+        carriage_no,seat_no,order_money,
+        order_create_time,order_status,train_start_date
+    </sql>
+</mapper>
